@@ -7,9 +7,12 @@
     <link href="{{ asset('styles.css') }}" rel="stylesheet">
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>Simple Portfolio</title>
 </head>
 <body>
+
+@include('sweetalert::alert')
 
 <!--header section starts-->
 <header>
@@ -35,7 +38,7 @@
 
 
     <div class="content">
-        <img class="tilt" src="images/home-pic.png" alt="">
+        <img class="tilt" src="images/slydd.JPG" alt="">
         <h3> sylvester <span>akwaowo</span> </h3>
         <p> i am a <span class="typing-text"> software developer </span> </p>
         <a href="#about" class="btn">about me</a>
@@ -54,7 +57,7 @@
     <div class="row">
 
         <div class="image">
-            <img class="tilt" src="images/about-pic.jpg" alt="">
+            <img class="tilt" src="public/images/slydd.JPG" alt="">
         </div>
 
         <div class="content">
@@ -74,7 +77,7 @@
                     <p> <span> address : </span> royal ravico, greater accra</p>
                 </div>
             </div>
-            <a href="#" class="btn">download CV</a>
+
         </div>
 
     </div>
@@ -128,16 +131,22 @@
             <img class="tilt" src="images/contact-img.svg" alt="">
         </div>
 
-        <form action="">
+        <form action="{{route('contact.form')}}" method="post">
+            @csrf
 
             <div class="inputBox">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
+                <input type="text"  placeholder="Name" name="name" value="" required>
+
+
+                <input type="email" placeholder="Email" name="email" required>
             </div>
 
-            <input type="text" placeholder="Subject" class="box">
 
-            <textarea placeholder="Message" name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="text" placeholder="Subject" class="box" name="subject" required>
+
+
+            <textarea placeholder="Message" required name="message"  cols="30" rows="10"></textarea>
 
             <input type="submit" class="btn" value="send message">
 
@@ -170,6 +179,7 @@
 
 <!-- typed.js link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
 
 <!-- particles.js links  -->
 <script src="js/particles.min.js"></script>
@@ -204,6 +214,8 @@
     });
 
 </script>
+
+
 
 </body>
 </html>
