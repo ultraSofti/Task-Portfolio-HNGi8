@@ -109,7 +109,7 @@
         <div class="box tilt">
             <i class="fas fa-bullhorn"></i>
             <h3>seo marketing</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+            <p>We deliver the best SEO services, tailored to rank you higher than your competitors</p>
         </div>
 
 
