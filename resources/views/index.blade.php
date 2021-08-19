@@ -57,7 +57,9 @@
     <div class="row">
 
         <div class="image">
-            <img class="tilt" src="public/images/slydd.JPG" alt="">
+            <a href="https://internship.zuri.team/">
+            <img class="tilt" src="images/zuri.png" alt="">
+            </a>
         </div>
 
         <div class="content">
@@ -128,7 +130,9 @@
     <div class="row">
 
         <div class="image">
-            <img class="tilt" src="images/contact-img.svg" alt="">
+            <a href="https://internship.zuri.team/">
+            <img class="tilt" src="images/hng.jpeg" alt="">
+            </a>
         </div>
 
         <form action="{{route('contact.form')}}" method="post">
