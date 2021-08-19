@@ -136,7 +136,7 @@
         </div>
 
         <form action="{{route('contact.form')}}" method="post">
-            @csrf
+            {{csrf_field()}}
 
             <div class="inputBox">
                 <input type="text"  placeholder="Name" name="name" value="" required>
